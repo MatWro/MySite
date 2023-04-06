@@ -1,0 +1,200 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibile" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="{% static '/css/main.css'%}"
+    type="text/css">
+    <script src="https://kit.fontawesome.com/2fedd6c208.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="{% static 'images/logo2.png'%}" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Python Developer</p>
+                <h1><span>H</span>i, welcome to my website,<br> I'm <span>Mateusz</span> Wróbel.</h1>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--------------about---------->
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="{% static 'images/photo2.jpeg'%}">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title"><span>A</span>bout Me</h2>
+                <p class="aboutme">My name is Mateusz. I graduated from the University of Economics in Krakow in the
+                    field of applied
+                    computer science. During my studies, I worked as a banker for a business client. At the moment I am
+                    looking for my first job as a developer. For the last few months I have been improving my Python
+                    programming skills. In 2017, I completed a full-time certified FrontEnd developer course at the
+                    CodersLab programming school.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br> Simple apliaction</li>
+                        <li><span>Tkinter</span><br> Building python GUI apps</li>
+                        <li><span>UI</span><br> Designing web interfaces</li>
+                        <li><span>Ubuntu</span><br> Queries in CLI </li>
+                        <li><span>SQL</span> <br> Creating and extracting data from databases</li>
+                    </ul>
+                </div>
+                <div class="tab-contents experience" id="experience">
+                    <ul>
+                        <li><span>2022-present</span><br>Project Menager at Elektro-Spec Sp. z o.o. </li>
+                        <li><span>2022-2023</span><br> Junior Support Specialist at Adminotaur Sp. z o.o.</li>
+                        <li><span>2018-2022</span><br> Business Client Advisor at CMI Maciej Uhl(Alior Bank) </li>
+                        <li><span>2016-2017</span><br>Customer Service Consultant at ITI Neovision(Canal+) </li>
+                    </ul>
+                </div>
+                <div class="tab-contents education" id="education">
+                    <ul>
+                        <li><span>2022</span><br> Data Analyst Associate Certification at datacamp.com</li>
+                        <li><span>2017-2019</span><br> Cracow University of Economics Master degree, Applied Computer
+                            Science</li>
+                        <li><span>2012-2016</span><br> Cracow University of Economics Bachelor degree, Applied Computer
+                            Science</li>
+                        <li><span>2017</span><br> Become FrontEnd Developer Certification at Coderslab </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------portfolio--------------->
+    <div id="portfolio">
+        <div class="container">
+            <h2 class="sub-title"><span>P</span>ortfolio</h2>
+            <div class="portfolio-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Game Craft Calculator</h3>
+                    <p>Simple game craft profit calculator. GUI app written using tkinter and python. The results are
+                        stored in a database using Sqlite3. </p>
+                    <a href="#">Full project on github</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Game Craft Calculator</h3>
+                    <p>Simple game craft profit calculator. GUI app written using tkinter and python. The results are
+                        stored in a database using Sqlite3. </p>
+                    <a href="#">Full project on github</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Game Craft Calculator</h3>
+                    <p>Simple game craft profit calculator. GUI app written using tkinter and python. The results are
+                        stored in a database using Sqlite3. </p>
+                    <a href="#">Full project on github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------contact------------------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="sub-title"><span>C</span>ontact Me</h2>
+                    <p><i class="fa-solid fa-phone"></i>mateusz.wrobel993@gmail.com </p>
+                    <p><i class="fa-sharp fa-solid fa-share"></i> +48604718555</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/mateuszwr%C3%B3bel/"><i class="fa-brands fa-linkedin">
+                            </i></a>
+                        <a href="https://github.com/MatWro"> <i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/Mateusz Wróbel CV ENG.pdf" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" row="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg">hello</span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2023, Mateusz Wróbel </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwc4mkcdTYoEoN5lMqs_GZr5VIND8NtFmK1IHHDqwz7uPHsCzCkhDlmeo4OC2RIg_kP/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
